@@ -1,0 +1,10 @@
+insert into TB_EMPRESA (nome, email) values ('Zqmztvqwbar', 'xrayworth0@guardian.co.uk');
+insert into TB_EMPRESA (nome, email) values ('Wczqyluimom', 'kfontel1@skype.com');
+insert into TB_EMPRESA (nome, email) values ('Ayyzvznxgdw', 'hcoverlyn2@gravatar.com');
+insert into TB_EMPRESA (nome, email) values ('Ljxffvmqkrf', 'sshackleford3@hatena.ne.jp');
+insert into TB_EMPRESA (nome, email) values ('Xnijapedmhq', 'gblincowe4@de.vu');
+insert into TB_EMPRESA (nome, email) values ('Wumgapcuguc', 'astanion5@nps.gov');
+insert into TB_EMPRESA (nome, email) values ('Aygbominxwn', 'dbarkhouse6@usatoday.com');
+insert into TB_EMPRESA (nome, email) values ('Pbphrdoqxrm', 'dworks7@house.gov');
+insert into TB_EMPRESA (nome, email) values ('Tgflwjkgsoq', 'jbugs8@scientificamerican.com');
+insert into TB_EMPRESA (nome, email) values ('Potjoyvddfe', 'lpozzo9@surveymonkey.com');
