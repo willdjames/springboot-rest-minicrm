@@ -9,7 +9,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.PostConstruct;
 import java.util.List;
 
 @RestController
@@ -29,10 +28,20 @@ public class EmpresaController {
         return ResponseEntity.status(HttpStatus.OK).body(corpoResponse);
     }
 
-
     @PostMapping
     public ResponseEntity<EmpresaDto> salvaNovaEmpresa(@RequestBody EmpresaForm novaEmpresa) {
         Empresa empresaSalva = empresaService.salva(novaEmpresa);
         return ResponseEntity.status(HttpStatus.CREATED).body(new EmpresaDto(empresaSalva));
     }
+
+    @GetMapping("/{id}/exibeNaFila")
+    public ResponseEntity<?> exibeEmpresaNaFilaMQ(@PathVariable("id") Integer id){
+
+        String mensagem = String.valueOf(id);
+
+        empresaService.enviaParaFilaExibeEmpresa(mensagem);
+
+        return ResponseEntity.status(HttpStatus.OK).build();
+    }
+
 }

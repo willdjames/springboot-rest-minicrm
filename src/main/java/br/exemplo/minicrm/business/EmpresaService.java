@@ -2,6 +2,7 @@ package br.exemplo.minicrm.business;
 
 import br.exemplo.minicrm.model.EmpresaForm;
 import br.exemplo.minicrm.model.entity.Empresa;
+import br.exemplo.minicrm.mdb.MenssageriaBean;
 import br.exemplo.minicrm.repository.EmpresaJpaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,6 +11,9 @@ import java.util.List;
 
 @Service
 public class EmpresaService {
+
+    @Autowired
+    private MenssageriaBean menssageria;
 
     @Autowired
     private EmpresaJpaRepository empresaJPARepository;
@@ -22,4 +26,7 @@ public class EmpresaService {
         return empresaJPARepository.saveAndFlush(novaEmpresa.getEmpresa());
     }
 
+    public void enviaParaFilaExibeEmpresa(String mensagem) {
+        menssageria.enviaParaFilaExibeEmpresa(mensagem);
+    }
 }
